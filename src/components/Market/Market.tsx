@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Article } from "../../data/articles";
 import CurrentPrice from "../Article/CurrentPrice";
+import { Link } from "react-router-dom";
 
 interface MarketProps {
   articles: Article[];
@@ -50,7 +51,7 @@ function Market({ categories, articles }: MarketProps) {
                 key={index}
                 className="rounded-2xl shadow-xl w-full hover:shadow-2xl "
               >
-                <a href={`articulo/${id}`}>
+                <Link to={`/articulo/${id}`}>
                   <div className="flex flex-col">
                     <img
                       src={`/${id}_1.jpg`}
@@ -68,7 +69,7 @@ function Market({ categories, articles }: MarketProps) {
                       />
                     </div>
                   </div>
-                </a>
+                </Link>
               </section>
             );
           }
