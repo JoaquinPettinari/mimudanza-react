@@ -26,7 +26,7 @@ function Market({ categories, articles }: MarketProps) {
   }, [activeCategory, articles]);
 
   return (
-    <section>
+    <section className="p-3 md:p-0">
       <header>
         <h3 className="text-2xl pb-4">Elegir categoría</h3>
         <div className="flex flex-wrap gap-7">
