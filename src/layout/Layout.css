@@ -1,0 +1,11 @@
+.header {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.background {
+  background: linear-gradient(45deg, rgb(106, 120, 209), rgb(0, 164, 189));
+}
