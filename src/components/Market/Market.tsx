@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import type { Article } from "../../data/articles";
 import CurrentPrice from "../Article/CurrentPrice";
 import { Link } from "react-router-dom";
+import FilterCategories from "../FilterCategories/FilterCategories";
 
 interface MarketProps {
   articles: Article[];
@@ -9,46 +10,38 @@ interface MarketProps {
 }
 
 function Market({ categories, articles }: MarketProps) {
-  const [activeCategory, setActiveCategory] = useState("Ver todo");
+  const [activeCategories, setActiveCategories] = useState<string[]>([
+    "Ver todo",
+  ]);
+
   const allCategories = useMemo(() => {
     return ["Ver todo", ...categories];
   }, [categories]);
 
   const filteredArticles = useMemo(() => {
     return articles
-      .filter(
-        (article) =>
-          activeCategory === "Ver todo" || article.category === activeCategory
-      )
+      .filter((article) => {
+        if (activeCategories.includes("Ver todo")) return true;
+        return activeCategories.includes(article.category);
+      })
       .sort((a, b) => {
         return b.price - a.price;
       });
-  }, [activeCategory, articles]);
+  }, [activeCategories, articles]);
 
   return (
-    <section className="p-3 md:p-0">
-      <header>
-        <h3 className="text-2xl pb-4">Elegir categoría</h3>
-        <div className="flex flex-wrap gap-7">
-          {allCategories.map((category, index) => (
-            <h3
-              className={`text-xl text-gray-500 cursor-pointer ${
-                activeCategory === category ? "font-bold" : ""
-              }`}
-              key={index}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </h3>
-          ))}
-        </div>
-      </header>
-      <article className="pt-9 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+    <section className="p-3">
+      <FilterCategories
+        allCategories={allCategories}
+        activeCategories={activeCategories}
+        setActiveCategories={setActiveCategories}
+      />
+      <article className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
         {filteredArticles.map(
-          ({ id, title, price, ask, reserved, sold, discount }, index) => {
+          ({ id, title, price, ask, reserved, sold, discount }) => {
             return (
               <section
-                key={index}
+                key={id}
                 className="rounded-2xl shadow-xl w-full hover:shadow-2xl "
               >
                 <Link to={`/articulo/${id}`}>

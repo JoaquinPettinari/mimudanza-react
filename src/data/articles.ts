@@ -251,4 +251,13 @@ export const ARTICLES = [
       "Mat de yoga nuevo! Es buenisimo!",
     photos: 1,
   },
+  {
+    id: "apple_watch",
+    title: "Apple Watch Serie 8 45mm Gps Aluminio Sport Band Color De La Caja Midnight M/l",
+    category: CATEGORIAS.Tecnologia,
+    price: 300000,
+    description:
+      "La batería dura todo el día. Tengo la caja original. Fue comprado en el exterior",
+    photos: 1,
+  },
 ];
