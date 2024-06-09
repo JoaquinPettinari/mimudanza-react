@@ -12,12 +12,14 @@ export interface Article {
 }
 
 enum CATEGORIAS {
-  Fitness = "Fitness",
+  Ejercicio = "Ejercicio",
   JuegoDeMesa = "Juegos de Mesa",
   Tecnologia = "Tecnología",
   Cocina = "Cocina",
   Exterior = "Exterior",
   Muebles = "Muebles",
+  Camping = "Camping",
+  Auto = "Auto",
   Otro = "Otro",
 }
 
@@ -25,10 +27,11 @@ export const ARTICLES = [
   {
     id: "bicicleta_moove",
     title: "Bicicleta Moove R29",
-    category: CATEGORIAS.Fitness,
+    category: CATEGORIAS.Ejercicio,
     price: 300000,
     description: "Comprada nueva hace 2 años con muy poco uso.",
     photos: 3,
+    discount: 15
   },
   {
     id: "just_one",
@@ -46,6 +49,7 @@ export const ARTICLES = [
     description:
       "Monopoly es un juego de mesa basado en el intercambio y la compraventa de bienes raíces, reconocido mundialmente.",
     photos: 3,
+    discount: 10
   },
   {
     id: "erudito",
@@ -59,7 +63,7 @@ export const ARTICLES = [
   {
     id: "rollers",
     title: "Rollers",
-    category: CATEGORIAS.Fitness,
+    category: CATEGORIAS.Ejercicio,
     price: 130000,
     description:
       "Marca BladeRunner, modelo Pro 80 ajustables con frenos. Nuevos sin uso, talle 40, en caja.",
@@ -86,29 +90,20 @@ export const ARTICLES = [
     discount: 10,
   },
   {
-    id: "camara_compu",
-    title: "Camara Web Webcam Logitech C922 Pro Stream Full Hd Pce",
-    category: CATEGORIAS.Tecnologia,
-    price: 40000,
-    description:
-      "Transmití y grabá videos vibrantes y realistas. La lente de vidrio y la resolución Full HD 1080p capturan los detalles más emocionantes, los colores brillantes y naturales en video fluido a 30 fps, mientras que el campo de visión de 78 grados tiene capacidad para dos personas. Utilizá la aplicación para hacer zoom y desplazar la cámara.",
-    photos: 1,
-    reserved: true,
-  },
-  {
     id: "parlantes",
     title: "Parlantes Edifier R1100",
     category: CATEGORIAS.Tecnologia,
     price: 150000,
     description: `
-        Potencia de salida: 42 Watts (RMS) - L/R: 21 W + 21 W.
-        Respuesta de frecuencia: 65 Hz ~ 20 kHz
-        Tipos de entrada: Line-in PC - Line-in AUX
-        Tweeter: 13 mm
-        Woofer: 4" (116 mm)
-        Dimensiones: 140 × 226 × 197 mm (anch. x alt. x prof.)
-        Peso: 4.9 kg`,
+    Potencia de salida: 42 Watts (RMS) - L/R: 21 W + 21 W.
+    Respuesta de frecuencia: 65 Hz ~ 20 kHz
+    Tipos de entrada: Line-in PC - Line-in AUX
+    Tweeter: 13 mm
+    Woofer: 4" (116 mm)
+    Dimensiones: 140 × 226 × 197 mm (anch. x alt. x prof.)
+    Peso: 4.9 kg`,
     photos: 1,
+    reserved: true,
   },
   {
     id: "heladera",
@@ -117,23 +112,23 @@ export const ARTICLES = [
     price: 300000,
     description: "Nueva!! Tiene 8 meses nada mas!",
     photos: 2,
+    discount: 10
   },
   {
     id: "carpa",
     title: "Carpa Coleman 2 personas 3000mm",
-    category: CATEGORIAS.Otro,
+    category: CATEGORIAS.Camping,
     price: 200000,
     description:
       "Tiene solamente 4 usos, está nueva. Tamaño empaque: 46 cm x 16 cm. Peso: 2,8 kg.",
     photos: 1,
-    discount: 10,
+    discount: 20,
   },
   {
     id: "auto",
-    title: "Stepway 2022 36.000k Intense (tope de gama)",
-    category: CATEGORIAS.Otro,
-    ask: true,
-    price: 9999999,
+    title: "Stepway 2022 37.000k Intense (tope de gama)",
+    category: CATEGORIAS.Auto,
+    price: 16000000,
     description:
       "Stepway 2022 Intense manual 36.000 kilómetros, services oficiales. Mas de 20.000 kilómetros son de ruta.",
     photos: 4,
@@ -147,5 +142,113 @@ export const ARTICLES = [
       "Mesita de Luz 1 Cajón Moderna 'ACHERY' en Melamina de Primera Calidad Marca 'MASISA'. Medidas: 0.45 x 0.50 x 0.35 Mts.",
     photos: 1,
     reserved: true,
+  },
+  {
+    id: "aislante",
+    title: "Aislante bolsa de dormir",
+    category: CATEGORIAS.Camping,
+    price: 10000,
+    description:
+      "Aislante térmico para carpa, buen estado",
+    photos: 1,
+  },
+  {
+    id: "exprimidor_jugo",
+    title: "Exprimidora de jugo liliana",
+    category: CATEGORIAS.Cocina,
+    price: 15000,
+    description:
+      "Exprimidor de jugo marca Liliana con filtros de pulpa regulable.",
+    photos: 1,
+  },
+  {
+    id: "valijon_auto",
+    title: "Valijón para auto 210L",
+    category: CATEGORIAS.Auto,
+    price: 80000,
+    description:
+      "Valijón para auto, sin mucho uso. Viene con 2 llaves, se puede vender el portaequipaje tambien.",
+    photos: 2,
+  },
+  {
+    id: "palos_trekking",
+    title: "Palos de trekking importados",
+    category: CATEGORIAS.Ejercicio,
+    price: 30000,
+    description:
+      "Palos de trekking expansibles, viene con varias puntas para distintas superficies.",
+    photos: 1,
+  },
+  {
+    id: "juego_mesa_exterior",
+    title: "Juego de exterior de plástico",
+    category: CATEGORIAS.Exterior,
+    price: 40000,
+    description:
+      "2 sillones modelo Miami comodísimo con mesa de plastico.",
+    photos: 1,
+  },
+  {
+    id: "mesa_plegable",
+    title: "Mesa de camping de plástico plegable",
+    category: CATEGORIAS.Exterior,
+    price: 40000,
+    description:
+      "Mesas De Camping Valija De Plastico 1.80 Plegable Color Blanco.",
+    photos: 2,
+  },
+  {
+    id: "raqueta_wilson",
+    title: "Raqueta de tenis Wilson",
+    category: CATEGORIAS.Ejercicio,
+    price: 230000,
+    description:
+      "Raqueta de tenis wilson con menos de 1 año de uso. 300g gramos, tamaño Del Grip 4 3/8, aro 100.",
+    photos: 1,
+  },
+  {
+    id: "teclado_hyperx",
+    title: "Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica color negro con luz RGB",
+    category: CATEGORIAS.Tecnologia,
+    price: 60000,
+    description:
+      "2 años de uso! Funciona a la perfección.",
+    photos: 1,
+  },
+  {
+    id: "colchon_inflable",
+    title: "Colchon Inflable Intex Downy Set X2 + 2 Almohadas+ Inflador",
+    category: CATEGORIAS.Camping,
+    price: 50000,
+    description:
+      "Están en perfecto estado, son comodísimos. Una almohada está pinchada :(. Viene con inflador",
+    photos: 1,
+  },
+  {
+    id: "cobertor_auto",
+    title: "Cubre Coche Auto Antigranizo Impermeable",
+    category: CATEGORIAS.Auto,
+    price: 30000,
+    description:
+      "2 usos. TALLE M (AUTOS DE 3,76 A 4, 20MTS): VOLKSWAGEN GOL POWER / TREND, RENAULT SANDERO, PEUGEOT 206/207/208, CHEVROLET CORSA/CLASSIC, CHEVROLET ONIX, FIESTA KINETIC 5P, TOYOTA ETIOS 5P, FIAT ARGO, RENAULT SANDERO Y SIMILARES",
+    photos: 1,
+  },
+    {
+    id: "cargador_tres_en_uno",
+    title: "Cargador Tres En Uno",
+    category: CATEGORIAS.Tecnologia,
+    price: 15000,
+    description:
+      "Base inalámbrica 3 en 1. Carga reloj, auricular y celular",
+    photos: 1,
+  },
+  {
+    id: "mat_yoga",
+    title: "Mat de yoga",
+    category: CATEGORIAS.Ejercicio,
+    price: 10000,
+    description:
+      "Mat de yoga nuevo! Es buenisimo!",
+    photos: 1,
   },
 ];
