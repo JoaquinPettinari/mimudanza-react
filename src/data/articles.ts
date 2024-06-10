@@ -31,7 +31,7 @@ export const ARTICLES = [
     price: 300000,
     description: "Comprada nueva hace 2 años con muy poco uso.",
     photos: 3,
-    discount: 15
+    discount: 15,
   },
   {
     id: "just_one",
@@ -49,7 +49,7 @@ export const ARTICLES = [
     description:
       "Monopoly es un juego de mesa basado en el intercambio y la compraventa de bienes raíces, reconocido mundialmente.",
     photos: 3,
-    discount: 10
+    discount: 10,
   },
   {
     id: "erudito",
@@ -101,7 +101,7 @@ export const ARTICLES = [
     Tweeter: 13 mm
     Woofer: 4" (116 mm)
     Dimensiones: 140 × 226 × 197 mm (anch. x alt. x prof.)
-    Peso: 4.9 kg`,
+    Peso: 4.9 kg.`,
     photos: 1,
     reserved: true,
   },
@@ -112,7 +112,7 @@ export const ARTICLES = [
     price: 300000,
     description: "Nueva!! Tiene 8 meses nada mas!",
     photos: 2,
-    discount: 10
+    discount: 10,
   },
   {
     id: "carpa",
@@ -148,8 +148,7 @@ export const ARTICLES = [
     title: "Aislante bolsa de dormir",
     category: CATEGORIAS.Camping,
     price: 10000,
-    description:
-      "Aislante térmico para carpa, buen estado",
+    description: "Aislante térmico para carpa, buen estado",
     photos: 1,
   },
   {
@@ -184,8 +183,7 @@ export const ARTICLES = [
     title: "Juego de exterior de plástico",
     category: CATEGORIAS.Exterior,
     price: 40000,
-    description:
-      "2 sillones modelo Miami comodísimo con mesa de plastico.",
+    description: "2 sillones modelo Miami comodísimo con mesa de plastico.",
     photos: 1,
   },
   {
@@ -208,11 +206,11 @@ export const ARTICLES = [
   },
   {
     id: "teclado_hyperx",
-    title: "Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica color negro con luz RGB",
+    title:
+      "Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica color negro con luz RGB",
     category: CATEGORIAS.Tecnologia,
     price: 60000,
-    description:
-      "2 años de uso! Funciona a la perfección.",
+    description: "2 años de uso! Funciona a la perfección.",
     photos: 1,
   },
   {
@@ -233,13 +231,12 @@ export const ARTICLES = [
       "2 usos. TALLE M (AUTOS DE 3,76 A 4, 20MTS): VOLKSWAGEN GOL POWER / TREND, RENAULT SANDERO, PEUGEOT 206/207/208, CHEVROLET CORSA/CLASSIC, CHEVROLET ONIX, FIESTA KINETIC 5P, TOYOTA ETIOS 5P, FIAT ARGO, RENAULT SANDERO Y SIMILARES",
     photos: 1,
   },
-    {
+  {
     id: "cargador_tres_en_uno",
     title: "Cargador Tres En Uno",
     category: CATEGORIAS.Tecnologia,
     price: 15000,
-    description:
-      "Base inalámbrica 3 en 1. Carga reloj, auricular y celular",
+    description: "Base inalámbrica 3 en 1. Carga reloj, auricular y celular",
     photos: 1,
   },
   {
@@ -247,13 +244,13 @@ export const ARTICLES = [
     title: "Mat de yoga",
     category: CATEGORIAS.Ejercicio,
     price: 10000,
-    description:
-      "Mat de yoga nuevo! Es buenisimo!",
+    description: "Mat de yoga nuevo! Es buenisimo!",
     photos: 1,
   },
   {
     id: "apple_watch",
-    title: "Apple Watch Serie 8 45mm Gps Aluminio Sport Band Color De La Caja Midnight M/l",
+    title:
+      "Apple Watch Serie 8 45mm Gps Aluminio Sport Band Color De La Caja Midnight M/l",
     category: CATEGORIAS.Tecnologia,
     price: 300000,
     description:
