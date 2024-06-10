@@ -2,4 +2,4 @@
 
 Please be free to visit: https://vendemos-todo.vercel.app/
 
-Author: Joaquin Pettinari
+Author: Joaquin Pettinari.
