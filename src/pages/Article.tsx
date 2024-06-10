@@ -14,26 +14,27 @@ function Article() {
     setArticle(article);
   }, [id]);
 
+  if (!article) {
+    return <h3>No se encuentra el articulo</h3>;
+  }
+
   return (
     <section className="h-full p-5 lg:pt-32 flex flex-col md:flex-row">
-      <ArticleCarousel id={id || ""} photos={article?.photos || 1} />
+      <ArticleCarousel id={id ?? ""} photos={article.photos} />
       <div className="p-6 w-full md:w-1/2 flex flex-col gap-5">
         <Link to="/">
           <h3 className="text-gray-500 text-base">Volver</h3>
         </Link>
-        <h2 className="text-2xl">{article?.title}</h2>
+        <h2 className="text-2xl">{article.title}</h2>
         <CurrentPrice
-          price={article?.price || 0}
-          ask={article?.ask}
-          reserved={article?.reserved}
-          sold={article?.sold}
-          discount={article?.discount}
+          price={article.price}
+          ask={article.ask}
+          reserved={article.reserved}
+          sold={article.sold}
+          discount={article.discount}
         />
-        <h3 className="text-xl">{article?.description}</h3>
-        <WhatsAppButton
-          title={article?.title || ""}
-          id={article?.id || id || ""}
-        />
+        <h3 className="text-xl">{article.description}</h3>
+        <WhatsAppButton title={article.title} id={article.id} />
       </div>
     </section>
   );
