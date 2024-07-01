@@ -113,16 +113,7 @@ export const ARTICLES = [
     description: "Nueva!! Tiene 8 meses nada mas!",
     photos: 2,
     discount: 10,
-  },
-  {
-    id: "carpa",
-    title: "Carpa Coleman 2 personas 3000mm",
-    category: CATEGORIAS.Camping,
-    price: 200000,
-    description:
-      "Tiene solamente 4 usos, está nueva. Tamaño empaque: 46 cm x 16 cm. Peso: 2,8 kg.",
-    photos: 1,
-    discount: 20,
+    reserved: true
   },
   {
     id: "auto",
@@ -132,16 +123,6 @@ export const ARTICLES = [
     description:
       "Stepway 2022 Intense manual 36.000 kilómetros, services oficiales. Mas de 20.000 kilómetros son de ruta.",
     photos: 4,
-  },
-  {
-    id: "mesa_de_luz",
-    title: "Mesa de luz moderna",
-    category: CATEGORIAS.Muebles,
-    price: 30000,
-    description:
-      "Mesita de Luz 1 Cajón Moderna 'ACHERY' en Melamina de Primera Calidad Marca 'MASISA'. Medidas: 0.45 x 0.50 x 0.35 Mts.",
-    photos: 1,
-    reserved: true,
   },
   {
     id: "aislante",
@@ -185,6 +166,7 @@ export const ARTICLES = [
     price: 40000,
     description: "2 sillones modelo Miami comodísimo con mesa de plastico.",
     photos: 1,
+    reserved: true
   },
   {
     id: "mesa_plegable",
@@ -203,15 +185,7 @@ export const ARTICLES = [
     description:
       "Raqueta de tenis wilson con menos de 1 año de uso. 300g gramos, tamaño Del Grip 4 3/8, aro 100.",
     photos: 1,
-  },
-  {
-    id: "teclado_hyperx",
-    title:
-      "Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica color negro con luz RGB",
-    category: CATEGORIAS.Tecnologia,
-    price: 60000,
-    description: "2 años de uso! Funciona a la perfección.",
-    photos: 1,
+    reserved: true
   },
   {
     id: "colchon_inflable",
